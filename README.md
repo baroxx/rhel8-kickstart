@@ -4,6 +4,10 @@ You can modify and use the Kickstart file (anaconda-ks.cfg) to automate the inst
 
 Source: [RedHat documentation](https://access.redhat.com/login?redirectTo=https%3A%2F%2Faccess.redhat.com%2Fdocumentation%2Fen-us%2Fred_hat_enterprise_linux%2F7%2Fhtml%2Finstallation_guide%2Fsect-simple-install-kickstart)
 
+## install.sh
+
+You can use the bash script to create a virtual machine using the kickstart file.
+
 ## Preparation of the Kickstart file
 
 You can use the [Kickstart Generator](https://access.redhat.com/labs/kickstartconfig/) from Red Hat and do some adjustments (for example manage the subscription with [RHSM](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/performing_an_advanced_rhel_installation/register-and-install-from-cdn-kickstart_installing-rhel-as-an-experienced-user)). 
