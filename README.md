@@ -20,7 +20,7 @@ Download the ISO: https://developers.redhat.com/products/rhel/download
 
 ```
 # Mount the iso:
-mount -o loop /tmp/rhel-server-7.3-x86_64-dvd.iso /mnt/
+mount -o loop /tmp/rhel-8.5-x86_64-dvd.iso /mnt/
 
 # Copy the content to a working directory:
 cp -avRf /mnt/* /home/bastian/rhel-install/
