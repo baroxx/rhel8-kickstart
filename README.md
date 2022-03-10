@@ -35,7 +35,8 @@ cp /root/anaconda-ks.cfg /home/bastian/rhel-install/
 isoinfo -d -i ISONAME.iso | grep "Volume id" | \ sed -e 's/Volume id: //' -e 's/ /\\x20/g'
 
 # Add the menu entry to the isolinux boot menu (see example below)
-Mount the efi bootloader: 
+
+# Mount the efi bootloader: 
 mount /root/rhel-install/images/efiboot.img /mnt/
 
 # Add the a menu entry for the Kickstart installation to the grub menu (see example below): 
@@ -49,4 +50,24 @@ mkisofs -untranslated-filenames -volid "RHEL-8-3-0-BaseOS-x86_64" -J -joliet-lon
 
 # Make the new ISO bootable:
 isohybrid --uefi rhel8-ks.iso
+```
+
+**Example isolinux boot menu**
+
+Set the inst.stage2=hd:LABEL= and inst.ks=hd:LABEL= values to the volume name of the ISO, see step 6
+```
+label kickstart
+  menu label ^Kickstart Installation of RHEL8.5
+  kernel vmlinuz
+  append initrd=initrd.img inst.stage2=hd:LABEL=RHEL-8-5-0-BaseOS-x86_64 inst.ks=hd:LABEL=RHEL-8-5-0-BaseOS-x86_64:/anaconda-ks.cfg
+```
+
+**Example grub boot menu**
+
+Set the inst.stage2=hd:LABEL= and inst.ks=hd:LABEL= values to the volume name of the ISO, see step 6
+```
+menuentry 'Kickstart Installation of RHEL8.5' --class fedora --class gnu-linux --class gnu --class os {
+        linuxefi /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=RHEL-8-5-0-BaseOS-x86_64 inst.ks=hd:LABEL=RHEL-8-5-0-BaseOS-x86_64:/anaconda-ks.cfg
+        initrdefi /images/pxeboot/initrd.img
+}
 ```
