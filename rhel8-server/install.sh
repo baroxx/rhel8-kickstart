@@ -5,7 +5,7 @@ echo ""
 MEM_SIZE=4096
 VCPUS=2
 OS_VARIANT="rhl8.0"
-ISO_FILE="/tmp/rhel-8.5-x86_64-dvd.iso"
+ISO_FILE="/opt/rhel-8.5-x86_64-dvd.iso"
 
 echo -en "Enter vm name: "
 read VM_NAME
