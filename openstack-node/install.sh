@@ -24,5 +24,5 @@ sudo virt-install \
      --disk size=${DISK_SIZE}  \
      --graphics=none \
      --os-variant=${OS_VARIANT} \
-     --initrd-inject ./anaconda-ks-INSTANCE_TYPE.cfg \
+     --initrd-inject ./anaconda-ks-${INSTANCE_TYPE}.cfg \
      --extra-args="ks=file:/anaconda-ks.cfg console=tty0 console=ttyS0,115200n8"
