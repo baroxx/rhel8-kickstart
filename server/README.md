@@ -6,7 +6,7 @@ Source: [RedHat documentation](https://access.redhat.com/login?redirectTo=https%
 
 ## install.sh
 
-You can use the bash script to create a virtual machine using the kickstart file. The ISO must be in a directory which is accessible by qemu (for example /tmp).
+You can use the bash script to create a virtual machine using the kickstart file. The ISO must be in a directory which is accessible by qemu (for example /opt).
 
 ## Kickstart file
 

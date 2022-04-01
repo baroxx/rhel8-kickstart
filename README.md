@@ -12,7 +12,7 @@ You can also use the [Kickstart Generator](https://access.redhat.com/labs/kickst
 
 # Preparation of the Image
 
-The following instructions show the required steps to create a bootable image with a Kickstart file for an automated installation.
+The following instructions show the required steps to create a bootable image with a Kickstart file for an automated installation. Replace "bastian" with your username.
 
 Download the ISO: https://developers.redhat.com/products/rhel/download
 
