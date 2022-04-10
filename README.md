@@ -2,7 +2,8 @@
 
 This repository contains examples for setups with a Kickstart file.
 
-- [rhel8-server/](rhel8-server/) - a default server installation
+- [server/](server/) - for a default server installation
+- [openstack-node/](openstack-node/) - for the preparation of OpenStack nodes
 
 # Preparation of the Kickstart file
 
